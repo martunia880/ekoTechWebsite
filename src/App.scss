@@ -1,4 +1,4 @@
-section {
+section  {
   padding: 30px 40px;
 }
 
@@ -12,8 +12,9 @@ section .benefits {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-.benefit__icon {
-  font-size: 28px;
-  color: green;
+
+  &__icon {
+    font-size: 28px;
+    color: green;
+  }
 }
