@@ -2,6 +2,32 @@ section {
   padding: 30px 40px;
 }
 
+.button--main {
+  display: inline-block;
+  padding: 0 20px;
+  background: linear-gradient(to bottom right, #47ef7f, #0f632b);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease-in-out;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+.button--main:hover {
+  transform: scale(110%);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5), -3px -3px 1rem rgba(45, 104, 43, 0.5), 3px 3px 10px rgba(255, 154, 90, 0.5);
+}
+
 section .benefits {
   display: flex;
 }
@@ -15,24 +41,60 @@ section .benefits {
 }
 .benefit__icon {
   font-size: 28px;
-  color: green;
+  color: #0f632b;
 }
 
 .header__img {
+  position: relative;
   width: 100%;
-  height: 70vh;
-  background-image: url("../public/measuring-device-g39a625ed8_640.jpg");
+  height: 60vh;
+  min-height: 400px;
+  background-image: url("../public/tools-gfefa4eb80_640.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: -10;
 }
 .header__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(28, 29, 58, 0.747);
+  z-index: -10;
+}
+.header__text {
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
   height: 100%;
-  background-color: rgba(28, 29, 58, 0.247);
   color: white;
+  z-index: 10;
+}
+.header__title {
+  margin: 0;
+  padding: 10px;
+  font-size: 40px;
+}
+.header__description {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  text-align: center;
+}
+.header__btn {
+  margin-top: 40px;
+}
+.header__decor--first {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#47ef7f), to(#0f632b));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header__decor--second {
+  padding-top: 2px;
+  color: #32BB60;
+  font-weight: 700;
 }/*# sourceMappingURL=App.css.map */
