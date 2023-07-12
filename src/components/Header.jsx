@@ -1,9 +1,7 @@
-import React , {useState} from 'react';
+import React from 'react';
 
 export default function Header() {
-	const changeBackground = function (e) {
-		e.target.style.background = 'red';
-	  }
+	
 	return (
 		
 		<header className='header'> 
@@ -12,7 +10,7 @@ export default function Header() {
 					<h3 className='header__title'><span className='header__decor--first'>Eko</span>Tech</h3> 
                     <p className='header__description'>Szukasz solidnego fachowca złotej rączki?</p> 
 					<p className='header__decor--second header__description'>Zadzwoń 530 868 713</p>
-                    <button className='header__btn button--main' role='button'>Zobacz ofertę</button>
+                    <button className='header__btn button--main'>Zobacz ofertę</button>
 				</div>
 				<div className='header__shadow'></div>
             </div>
