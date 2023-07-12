@@ -10,22 +10,24 @@ section {
   border-radius: 12px;
   color: #FFFFFF;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 2.5;
   outline: transparent;
   text-align: center;
   text-decoration: none;
-  transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s;
   -moz-user-select: none;
        user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
+  transition: transform 0.2s;
+  z-index: 10;
 }
 .button--main:hover {
   transform: scale(110%);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5), -3px -3px 1rem rgba(45, 104, 43, 0.5), 3px 3px 10px rgba(255, 154, 90, 0.5);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5), -3px -3px 1rem rgba(45, 104, 43, 0.5), 3px 3px 10px rgba(59, 57, 55, 0.5);
 }
 
 section .benefits {
@@ -53,7 +55,7 @@ section .benefits {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -10;
+  z-index: 0;
 }
 .header__shadow {
   position: absolute;
@@ -62,7 +64,7 @@ section .benefits {
   width: 100%;
   height: 100%;
   background-color: rgba(28, 29, 58, 0.747);
-  z-index: -10;
+  z-index: -100;
 }
 .header__text {
   padding: 40px 20px;
@@ -72,7 +74,7 @@ section .benefits {
   justify-content: center;
   height: 100%;
   color: white;
-  z-index: 10;
+  z-index: 100;
 }
 .header__title {
   margin: 0;
@@ -90,6 +92,7 @@ section .benefits {
 }
 .header__decor--first {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#47ef7f), to(#0f632b));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -97,4 +100,10 @@ section .benefits {
   padding-top: 2px;
   color: #32BB60;
   font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .header__img {
+    background-image: url("../public/tools-gbea3e7a68_1920.jpg");
+  }
 }/*# sourceMappingURL=App.css.map */
