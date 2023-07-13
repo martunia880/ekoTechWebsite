@@ -30,20 +30,30 @@ section {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5), -3px -3px 1rem rgba(45, 104, 43, 0.5), 3px 3px 10px rgba(59, 57, 55, 0.5);
 }
 
-section .benefits {
+.benefits {
+  padding: 40px 20px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.benefit {
+.benefits .benefit {
+  width: 300px;
+  padding: 10px;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.benefit__icon {
+.benefits .benefit__icon {
   font-size: 28px;
   color: #0f632b;
+}
+.benefits .benefit__title {
+  margin: 20px 0 0 0;
+  font-size: 20px;
 }
 
 .header__img {
@@ -73,7 +83,7 @@ section .benefits {
   align-items: center;
   justify-content: center;
   height: 100%;
-  color: white;
+  color: #FFFFFF;
   z-index: 100;
 }
 .header__title {
@@ -102,8 +112,95 @@ section .benefits {
   font-weight: 700;
 }
 
+.offers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(249, 250, 252);
+  font-size: 22px;
+  color: rgba(28, 29, 58, 0.747);
+}
+.offers__heading {
+  position: relative;
+}
+.offers__heading:after {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: rgba(28, 29, 58, 0.747);
+  color: rgba(28, 29, 58, 0.747);
+}
+.offers .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.offers .box .offer {
+  margin: 20px;
+  width: 300px;
+  height: 390px;
+  background-color: #FFFFFF;
+  box-shadow: 4px 3px 24px 0px rgba(194, 196, 220, 0.7);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.offers .box .offer__img {
+  width: 100%;
+  height: 200px;
+}
+.offers .box .offer__img--1 {
+  background-image: url(../public/measuring-device-g39a625ed8_640.jpg);
+}
+.offers .box .offer__img--2 {
+  background-image: url(../public/tools-gfefa4eb80_640.jpg);
+}
+.offers .box .offer__img--3 {
+  background-image: url(../public/measuring-device-g39a625ed8_640.jpg);
+}
+.offers .box .offer__heading {
+  margin: 20px 0 15px 0;
+  padding: 0 10px;
+  font-size: 22px;
+}
+.offers .box .offer__description {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 16px;
+}
+.offers .box .offer__description--left {
+  text-align: left;
+}
+.offers .box .offer__description--center {
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   .header__img {
     background-image: url("../public/tools-gbea3e7a68_1920.jpg");
+  }
+  .benefits {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .benefits .benefit {
+    width: 40%;
+  }
+  .offers .box {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .offers .box .offer {
+    width: 50%;
+    max-width: 300px;
+  }
+  .offers .box .offer__heading {
+    margin: 20px 0 10px 0;
+    font-size: 21px;
   }
 }/*# sourceMappingURL=App.css.map */
