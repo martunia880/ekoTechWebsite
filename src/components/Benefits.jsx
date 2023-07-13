@@ -10,11 +10,6 @@ import { faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 export default function Benefits() {
 	return (
 		<section className='benefits'>
-			<div className='benefit'>
-				<div className='benefit__icon'><FontAwesomeIcon icon={faMedal} /></div>
-				<h3 className='benefit__title'>Gwarancja jakości</h3>
-				<p className='benefit__description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima magnam tempore laboriosam, repellendus impedit voluptate voluptatem maxime quisquam sed neque.</p>
-			</div>
             <div className='benefit'>
 				<div className='benefit__icon'><FontAwesomeIcon icon={faCoins} /></div>
 				<h3 className='benefit__title'>Przystępne ceny</h3>
