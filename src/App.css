@@ -1,3 +1,8 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+
 section {
   padding: 30px 40px;
 }
@@ -59,7 +64,7 @@ section {
 .header__img {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 65vh;
   min-height: 400px;
   background-image: url("../public/tools-gfefa4eb80_640.jpg");
   background-position: center;
@@ -144,7 +149,7 @@ section {
 .offers .box .offer {
   margin: 20px;
   width: 300px;
-  height: 390px;
+  height: 370px;
   background-color: #FFFFFF;
   box-shadow: 4px 3px 24px 0px rgba(194, 196, 220, 0.7);
   border-radius: 8px;
@@ -153,15 +158,23 @@ section {
 .offers .box .offer__img {
   width: 100%;
   height: 200px;
+  background-position: center;
+  background-size: cover;
 }
 .offers .box .offer__img--1 {
-  background-image: url(../public/measuring-device-g39a625ed8_640.jpg);
-}
-.offers .box .offer__img--2 {
   background-image: url(../public/tools-gfefa4eb80_640.jpg);
 }
+.offers .box .offer__img--2 {
+  background-image: url(../public/monitoring-gbaae0c56b_640.jpg);
+}
 .offers .box .offer__img--3 {
-  background-image: url(../public/measuring-device-g39a625ed8_640.jpg);
+  background-image: url(../public/pexels-polina-zimmerman-3747132.jpg);
+}
+.offers .box .offer__img--4 {
+  background-image: url(../public/web-agency-1738168_1280.jpg);
+}
+.offers .box .offer__img--5 {
+  background-image: url(../public/network-connection-g999ade435_640.jpg);
 }
 .offers .box .offer__heading {
   margin: 20px 0 15px 0;
@@ -170,14 +183,81 @@ section {
 }
 .offers .box .offer__description {
   margin: 0;
-  padding: 0 10px;
+  padding: 0 20px;
   font-size: 16px;
 }
 .offers .box .offer__description--left {
   text-align: left;
+  padding: 0;
 }
 .offers .box .offer__description--center {
   text-align: center;
+}
+
+.opinions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: rgba(28, 29, 58, 0.747);
+}
+.opinions__heading {
+  position: relative;
+}
+.opinions__heading:after {
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: rgba(28, 29, 58, 0.747);
+  color: rgba(28, 29, 58, 0.747);
+}
+
+.opinion {
+  margin: 30px;
+  padding: 20px;
+  display: flex;
+  max-width: 400px;
+  background-color: #FFFFFF;
+  box-shadow: 4px 3px 24px 0px rgba(194, 196, 220, 0.7);
+  border-radius: 8px;
+}
+.opinion__author {
+  padding: 10px 20px;
+  width: 35%;
+  min-width: 110px;
+  font-size: 18px;
+}
+.opinion__author--name {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+.opinion__author--location {
+  margin: 8px 0;
+  font-size: 15px;
+}
+.opinion__author--rate {
+  margin: 10px 0 8px 0;
+  color: #F0E68C;
+}
+.opinion__author--date {
+  font-size: 14px;
+}
+.opinion__box {
+  padding: 10px 0;
+  width: 65%;
+  font-size: 17px;
+}
+.opinion__box--title {
+  margin: 8px 0;
+  font-weight: 700;
+}
+.opinion__box--description {
+  margin: 8px 0;
+  font-size: 15px;
 }
 
 @media (min-width: 768px) {
