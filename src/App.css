@@ -3,10 +3,6 @@ html {
   margin: 0;
 }
 
-section {
-  padding: 30px 40px;
-}
-
 .button--main {
   display: inline-block;
   padding: 0 20px;
@@ -33,32 +29,6 @@ section {
 .button--main:hover {
   transform: scale(110%);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5), -3px -3px 1rem rgba(45, 104, 43, 0.5), 3px 3px 10px rgba(59, 57, 55, 0.5);
-}
-
-.benefits {
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.benefits .benefit {
-  width: 300px;
-  padding: 10px;
-  max-width: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.benefits .benefit__icon {
-  font-size: 28px;
-  color: #0f632b;
-}
-.benefits .benefit__title {
-  margin: 20px 0 0 0;
-  font-size: 20px;
 }
 
 .header__img {
@@ -115,6 +85,32 @@ section {
   padding-top: 2px;
   color: #32BB60;
   font-weight: 700;
+}
+
+.benefits {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.benefits .benefit {
+  width: 300px;
+  padding: 20px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.benefits .benefit__icon {
+  font-size: 28px;
+  color: #0f632b;
+}
+.benefits .benefit__title {
+  margin: 20px 0 0 0;
+  font-size: 20px;
 }
 
 .offers {
@@ -195,6 +191,8 @@ section {
 }
 
 .opinions {
+  margin-bottom: 50px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -215,19 +213,27 @@ section {
   background-color: rgba(28, 29, 58, 0.747);
   color: rgba(28, 29, 58, 0.747);
 }
+.opinions__box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 
 .opinion {
   margin: 30px;
   padding: 20px;
   display: flex;
-  max-width: 400px;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 300px;
   background-color: #FFFFFF;
   box-shadow: 4px 3px 24px 0px rgba(194, 196, 220, 0.7);
   border-radius: 8px;
 }
 .opinion__author {
-  padding: 10px 20px;
-  width: 35%;
+  padding: 0 20px;
+  width: 90%;
   min-width: 110px;
   font-size: 18px;
 }
@@ -244,20 +250,37 @@ section {
   color: #F0E68C;
 }
 .opinion__author--date {
+  margin: 2px 0 10px 0;
   font-size: 14px;
 }
 .opinion__box {
-  padding: 10px 0;
-  width: 65%;
+  padding: 0 20px;
+  width: 90%;
   font-size: 17px;
 }
 .opinion__box--title {
-  margin: 8px 0;
+  margin: 5px 0;
   font-weight: 700;
 }
 .opinion__box--description {
   margin: 8px 0;
   font-size: 15px;
+}
+
+.slick-slider {
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 300px;
+  border-right: rgba(0, 0, 0, 0.0745098039) 2px solid;
+  border-left: rgba(0, 0, 0, 0.0745098039) 2px solid;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.slick-slider .slick-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -282,5 +305,18 @@ section {
   .offers .box .offer__heading {
     margin: 20px 0 10px 0;
     font-size: 21px;
+  }
+  .slick-slider {
+    max-width: 700px;
+  }
+}
+@media (min-width: 992px) {
+  .slick-slider {
+    max-width: 820px;
+  }
+}
+@media (max-width: 376px) {
+  html {
+    overflow-x: hidden;
   }
 }/*# sourceMappingURL=App.css.map */
