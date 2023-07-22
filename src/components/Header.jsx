@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-export default function Header() {
+export default function Header() {useEffect(() => {
+    const sectionToScroll = document.querySelector('.offers');
+    	if (sectionToScroll) {
+      		sectionToScroll.scrollIntoView({ behavior: 'smooth' });
+    	}
+  	}, []);
 	
 	return (
 		
