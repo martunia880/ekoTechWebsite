@@ -1,10 +1,10 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import offersData from '../data/offers-data';
 
-export default function Offer() {
+export default function Offer({secondComponentRef}) {
 	
 	return (
-		<section className='offers'>
+		<section className='offers' ref={secondComponentRef}>
             <h2 className='offers__heading'>Oferta</h2>
             <div className='box'>
                 <div className='offer'>
