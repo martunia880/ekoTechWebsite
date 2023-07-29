@@ -23,10 +23,13 @@ export default function NavBar() {
 							<a href='#home'>Home</a>
 						</li>
 						<li>
-							<a href='#offers'>Oferta</a>
+							<a href='#benefits'>O nas</a>
 						</li>
 						<li>
 							<a href='#offers'>Oferta</a>
+						</li>
+						<li>
+							<a href='#opinions'>Opinie</a>
 						</li>
 					</ul>
 			</nav>
