@@ -4,7 +4,7 @@ import offersData from '../data/offers-data';
 export default function Offer({secondComponentRef}) {
 	
 	return (
-		<section className='offers' ref={secondComponentRef}>
+		<section className='offers' id='offers' ref={secondComponentRef}>
             <h2 className='offers__heading'>Oferta</h2>
             <div className='box'>
                 <div className='offer'>

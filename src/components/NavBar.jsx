@@ -1,27 +1,35 @@
-import React, {useState} from "react";
+import React, { useState } from 'react';
+import { BrowserRouter, NavLink } from 'react-router-dom';
+import logo from '../logo.png';
 
 export default function NavBar() {
-    const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-  
-    const handleMobileNavToggle = () => {
-      setIsMobileNavOpen(!isMobileNavOpen);
-    };
-  
-    return (
-      <nav className='navbar'>
-        <div className='navbar__logo'>
-          <span>Logo</span>
-        </div>
-  
-        <div className={`navbar__links ${isMobileNavOpen ? 'open' : ''}`}>
-          <a href='#home'>Home</a>
-          <a href='#oferta'>Oferta</a>
-          <a href='#opinie'>Opinie</a>
-        </div>
-  
-        <div className='navbar__mobile-toggle' onClick={handleMobileNavToggle}>
-          <span>&#9776;</span>
-        </div>
-      </nav>
-    );
-  }
+	const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
+	const handleMobileNavToggle = () => {
+		setIsMobileNavOpen(!isMobileNavOpen);
+	};
+
+	return (
+		<BrowserRouter>
+			<nav className='navbar container'>
+				<div className='navbar__logo'>
+					<span>EkoTech</span>
+				</div>
+				<div className='navbar__burger-btn' onClick={handleMobileNavToggle}>
+					<span>&#9776;</span>
+				</div>
+				<ul className={`navbar__links ${isMobileNavOpen ? 'show' : ''}`}>
+						<li>
+							<a href='#home'>Home</a>
+						</li>
+						<li>
+							<a href='#offers'>Oferta</a>
+						</li>
+						<li>
+							<a href='#offers'>Oferta</a>
+						</li>
+					</ul>
+			</nav>
+		</BrowserRouter>
+	);
+}

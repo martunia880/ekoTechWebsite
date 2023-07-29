@@ -19,6 +19,13 @@ $dark-blue: rgba(28, 29, 58, 0.747);
 html {
 	padding: 0;
 	margin: 0;
+	scroll-behavior: smooth;
+}
+
+.container {
+	max-width: 2000px;
+	display: flex;
+	margin: 0 auto;
 }
 
 .button--main {
@@ -46,6 +53,51 @@ html {
 		transform: scale(110%);
 		box-shadow: 0 0 3px rgba(0, 0, 0, 0.5),
 			-3px -3px 1rem rgba(45, 104, 43, 0.5), 3px 3px 10px rgba(59, 57, 55, 0.5);
+	}
+}
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 40px;
+	height: 50px;
+	background-color: gray;
+	z-index: 1;
+
+	&__burger-btn {
+		z-index: 5;
+	}
+
+	&__links {
+		position: absolute;
+		display: flex;
+		padding: 0;
+		margin: 0;
+		right: 0;
+		height: calc(100vh - 60px);
+		top: 60px;
+		width: 70vw;
+		flex-direction: column;
+		list-style: none;
+		align-items: center;
+		justify-content: center;
+		background: $background-light;
+		transform: translateX(100%);
+		transition: all 0.3s ease-in;
+		z-index: 1;
+		li {
+			margin: 20px 0;
+			a {
+				width: 100%;
+				padding: 15px 20px;
+				font-size: 22px;
+				text-decoration: none;
+			}
+		}
+	}
+	&__links.show {
+		transform: translateX(0);
+		display: flex;
 	}
 }
 .header {
@@ -114,7 +166,7 @@ html {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-  font-size: 15px;
+	font-size: 15px;
 	.benefit {
 		width: 300px;
 		padding: 20px;
@@ -198,7 +250,7 @@ html {
 				margin: 20px 0 15px 0;
 				padding: 0 10px;
 				font-size: 19px;
-        color: $icon-color;
+				color: $icon-color;
 			}
 			&__description {
 				margin: 0;
@@ -309,18 +361,48 @@ html {
 }
 
 .footer {
-  bottom: 0;
+	bottom: 0;
 	background-color: $background-light;
 
-  &__paragraph {
-    margin: 0;
-    padding: 5px 10px;
-    font-size: 12px;
-    text-align: center;
-  }
+	&__paragraph {
+		margin: 0;
+		padding: 5px 10px;
+		font-size: 12px;
+		text-align: center;
+	}
 }
 
 @media (min-width: 768px) {
+	.navbar {
+		&__burger-btn {
+			display: none;
+		}
+
+		&__links {
+			display: flex;
+			position: unset;
+			padding: 0;
+			height: 100%;
+			width: auto;
+			flex-direction: row;
+			background-color: $background-light;
+			transform: translateX(0);
+			transition: all 0.3s ease-in;
+			z-index: 1;
+			li {
+				margin: 20px 0;
+				a {
+					width: 100%;
+					padding: 15px 20px;
+					font-size: 22px;
+					text-decoration: none;
+				}
+			}
+		}
+		&__links.show {
+			display: flex;
+		}
+	}
 	.header {
 		&__img {
 			background-image: url('../public/tools-gbea3e7a68_1920.jpg');
@@ -351,7 +433,6 @@ html {
 		max-width: 700px;
 	}
 }
-
 @media (min-width: 992px) {
 	.slick-slider {
 		max-width: 820px;

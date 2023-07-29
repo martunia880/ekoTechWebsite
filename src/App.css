@@ -5,6 +5,13 @@
 html {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 2000px;
+  display: flex;
+  margin: 0 auto;
 }
 
 .button--main {
@@ -33,6 +40,50 @@ html {
 .button--main:hover {
   transform: scale(110%);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5), -3px -3px 1rem rgba(45, 104, 43, 0.5), 3px 3px 10px rgba(59, 57, 55, 0.5);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 40px;
+  height: 50px;
+  background-color: gray;
+  z-index: 1;
+}
+.navbar__burger-btn {
+  z-index: 5;
+}
+.navbar__links {
+  position: absolute;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  right: 0;
+  height: calc(100vh - 60px);
+  top: 60px;
+  width: 70vw;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  background: rgb(249, 250, 252);
+  transform: translateX(100%);
+  transition: all 0.3s ease-in;
+  z-index: 1;
+}
+.navbar__links li {
+  margin: 20px 0;
+}
+.navbar__links li a {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 22px;
+  text-decoration: none;
+}
+.navbar__links.show {
+  transform: translateX(0);
+  display: flex;
 }
 
 .header__img {
@@ -302,6 +353,33 @@ html {
 }
 
 @media (min-width: 768px) {
+  .navbar__burger-btn {
+    display: none;
+  }
+  .navbar__links {
+    display: flex;
+    position: unset;
+    padding: 0;
+    height: 100%;
+    width: auto;
+    flex-direction: row;
+    background-color: rgb(249, 250, 252);
+    transform: translateX(0);
+    transition: all 0.3s ease-in;
+    z-index: 1;
+  }
+  .navbar__links li {
+    margin: 20px 0;
+  }
+  .navbar__links li a {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 22px;
+    text-decoration: none;
+  }
+  .navbar__links.show {
+    display: flex;
+  }
   .header__img {
     background-image: url("../public/tools-gbea3e7a68_1920.jpg");
   }

@@ -35,7 +35,7 @@ export default function Opinions(props) {
         ],
       };
 	return (
-		<section className="opinions">
+		<section className="opinions" id="opinions">
             <h2 className="opinions__heading">Opinie</h2>
             <div className="opinions__box">
                 <Slider ref={slider} {...sett}>
